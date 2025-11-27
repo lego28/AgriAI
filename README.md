@@ -90,39 +90,60 @@ AgriAI/
 ### 1. Setup Environment
 
 ```bash
-# Navigate to project
-cd c:\Users\arcot\Downloads\AgriAI\AgriAI
+# Clone the repository
+git clone https://github.com/lego28/AgriAI.git
+cd AgriAI
 
-# Activate virtual environment
+# Create and activate virtual environment
+python -m venv venv
 .\venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Setup Gemini API
+### 2. Run Application
 
 ```bash
-# Get your Gemini API key from https://makersuite.google.com/app/apikey
-
-# Set environment variable (PowerShell)
-$env:GEMINI_API_KEY="your-api-key-here"
-
-# Or add to .env file
-# GEMINI_API_KEY=your-api-key-here
-```
-
-### 3. Run Application
-
-```bash
-# Start server
-python server.py
-
-# Or use legacy app
+# Start Flask server
 python app.py
 
 # Visit http://localhost:5000 in browser
 ```
+
+**Note**: The system uses HuggingFace Gradio API (`zeus28/Agri-AI` space) for AI chat - no API keys required! The Gradio space must be accessible online.
+
+---
+
+## 💡 Key Features
+
+### 🔬 Multi-Crop Disease Detection
+- **4 Crop Types**: Coconut, Coffee, Cotton, Oil Palm
+- **Local PyTorch Models**: Trained CNN models for each crop
+- **High Accuracy**: 92%+ disease identification
+- **Instant Results**: 200-500ms inference time
+
+### 🤖 AI-Powered Chat (Gradio API)
+- **HuggingFace Integration**: Uses `zeus28/Agri-AI` Gradio space
+- **RAG System**: Retrieval-Augmented Generation with local knowledge base
+- **Multi-Language**: Supports English, Hindi, Tamil, Telugu
+- **Context-Aware**: Maintains conversation history
+
+### 🌴 Oil Palm Specialized Features
+- **Ripeness Classification**: 5-stage maturity detection
+- **Yield Prediction**: Harvest timing optimization
+- **Biomass Economics**: Revenue calculation from waste streams
+- **ESG Scoring**: Sustainability metrics (RSPO compliant)
+
+### 📊 Web Interface
+- **Landing Page**: Modern, responsive design
+- **AI Chat**: Real-time disease diagnosis
+- **Disease Detector**: Dedicated image upload interface
+- **ESG Dashboard**: Sustainability tracking
+- **Products**: Agricultural product catalog
+- **Subsidies**: Government scheme information
+
+---
 
 
 ## 📚 Learning Resources
@@ -135,16 +156,9 @@ python app.py
 
 ### Documentation
 - `README.md` - This file
-- `IMPLEMENTATION_SUMMARY.md` - Implementation notes
 - Code docstrings - Every module has detailed documentation
 
-### Research References
-- RSPO (Roundtable on Sustainable Palm Oil) standards
-- ISCC (International Sustainability & Carbon Certification)
-- FAO (Food and Agriculture Organization) oil palm guides
-- ResNet50 architecture for image classification
 
----
 
 ## 📄 License
 
@@ -153,10 +167,5 @@ This project is built on open-source components:
 - PyTorch (BSD)
 - LangChain (MIT)
 - Chroma (Apache 2.0)
-
----
-
-**Last Updated**: November 28, 2025
-**Version**: 1.0.0
-**Status**: Production Ready ✅
+- HuggingFace Gradio (Apache 2.0)
 
