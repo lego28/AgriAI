@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriAI - Coconut & Oil Palm Intelligence</title>
+    <link rel="stylesheet" href="static/ai_style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; cursor: pointer;">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">AgriAI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/ai" class="active">AI Assistant</a></li>
+                <li><a href="/subsidies">Subsidies</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/esg">ESG Score</a></li>
+                <li><button id="themeToggle" class="theme-toggle" title="Toggle Theme">☀️</button></li>
+                <li>
+                    <select id="languageSelector" class="language-select">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="hi">🇮🇳 हिंदी</option>
+                        <option value="ta">🇮🇳 தமிழ்</option>
+                        <option value="te">🇮🇳 తెలుగు</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="ai-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <button class="new-chat-btn" onclick="startNewChat()">
+                <span class="plus-icon">+</span>
+                New Chat
+            </button>
+
+            <div class="chat-history">
+                <div class="history-header">Chat History</div>
+                <div class="history-items" id="historyItems">
+                    <!-- Chat history items will be populated here -->
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="settings-btn" onclick="toggleSettings()">⚙️ Settings</button>
+                <button class="help-btn" onclick="showHelp()">❓ Help</button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-content">
+                    <h1 id="chatTitle">AgriAI Assistant</h1>
+                    <p id="chatSubtitle">Coconut & Oil Palm Farming Intelligence</p>
+                </div>
+
+                <!-- Crop Selector -->
+                <div class="crop-selector">
+                    <label for="cropType">Crop:</label>
+                    <select id="cropType" onchange="switchCrop()">
+                        <option value="coconut">🥥 Coconut</option>
+                        <option value="palm">🌴 Oil Palm</option>
+                        <option value="both">🌍 Both</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Messages Area -->
+            <div class="messages-container" id="messagesContainer">
+                <button class="scroll-to-bottom" id="scrollButton" onclick="scrollToBottom()" title="Jump to latest message">
+                    ↓
+                </button>
+                <div class="welcome-section">
+                    <div class="welcome-header">
+                        <h2>Welcome to AgriAI</h2>
+                        <p>Your AI-powered agricultural intelligence assistant</p>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <div class="action-grid">
+                            <button class="action-card" onclick="quickAction('disease')">
+                                <span class="action-icon">🦠</span>
+                                <span class="action-text">Disease Detection</span>
+                                <span class="action-desc">Identify crop diseases</span>
+                            </button>
+                            
+                            <button class="action-card" onclick="quickAction('ripeness')">
+                                <span class="action-icon">🍎</span>
+                                <span class="action-text">Ripeness Check</span>
+                                <span class="action-desc">Harvest timing</span>
+                            </button>
+                            
+                            <button class="action-card" onclick="quickAction('yield')">
+                                <span class="action-icon">📊</span>
+                                <span class="action-text">Yield Analysis</span>
+                                <span class="action-desc">Production forecast</span>
+                            </button>
+                            
+                            <button class="action-card" onclick="quickAction('sustainability')">
+                                <span class="action-icon">🌍</span>
+                                <span class="action-text">ESG Scoring</span>
+                                <span class="action-desc">Sustainability metrics</span>
+                            </button>
+                            
+                            <button class="action-card" onclick="quickAction('biomass')">
+                                <span class="action-icon">♻️</span>
+                                <span class="action-text">Biomass Value</span>
+                                <span class="action-desc">Circular economy</span>
+                            </button>
+                            
+                            <button class="action-card" onclick="quickAction('knowledge')">
+                                <span class="action-icon">📚</span>
+                                <span class="action-text">Knowledge Base</span>
+                                <span class="action-desc">Expert information</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="suggested-prompts">
+                        <p class="suggested-title">Try asking:</p>
+                        <button class="prompt-button" onclick="sendPrompt('My palm tree has rotting at the base')">
+                            "My palm tree has rotting at the base"
+                        </button>
+                        <button class="prompt-button" onclick="sendPrompt('When should I harvest my coconut bunches?')">
+                            "When should I harvest my coconut bunches?"
+                        </button>
+                        <button class="prompt-button" onclick="sendPrompt('Calculate biomass potential for 1000 palms')">
+                            "Calculate biomass potential for 1000 palms"
+                        </button>
+                        <button class="prompt-button" onclick="sendPrompt('What is my plantation ESG score?')">
+                            "What is my plantation ESG score?"
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-controls">
+                        <button class="control-btn" id="imageBtn" title="Upload Image (Photos of crops, diseases, fruits)" onclick="uploadImage()">
+                            📷
+                        </button>
+                        <button class="control-btn" id="voiceBtn" title="Voice Input - Speak in any language" onclick="startVoiceInput()">
+                            🎤
+                        </button>
+                    </div>
+
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Ask about disease, ripeness, yield, ESG, biomass... or upload an image"
+                        onkeydown="handleKeyPress(event)"
+                    ></textarea>
+
+                    <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send message">
+                        ➤
+                    </button>
+                </div>
+
+                <div class="input-info">
+                    <p>AgriAI can help with: Disease detection • Ripeness analysis • Yield prediction • ESG scoring • Biomass optimization • Knowledge retrieval</p>
+                    <p style="font-size: 12px; opacity: 0.7; margin-top: 8px;">💡 Tip: Press <kbd>Ctrl+M</kbd> for voice input, <kbd>Enter</kbd> to send</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - Info Panel -->
+        <aside class="info-panel">
+            <div class="info-header">
+                <h3>Analysis Panel</h3>
+                <button class="close-panel" onclick="toggleInfoPanel()">×</button>
+            </div>
+
+            <div class="info-content" id="infoPanelContent">
+                <div class="info-item">
+                    <h4>Crop Information</h4>
+                    <p id="cropInfo">Select a crop to see information</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Current Session</h4>
+                    <p id="sessionInfo">Session: Loading...</p>
+                </div>
+
+                <div class="info-item">
+                    <h4>Quick Stats</h4>
+                    <ul id="quickStats">
+                        <li>Queries: 0</li>
+                        <li>Images analyzed: 0</li>
+                        <li>Time: 0m</li>
+                    </ul>
+                </div>
+
+                <div class="info-item">
+                    <h4>System Status</h4>
+                    <ul id="systemStatus">
+                        <li>✓ RAG System: Ready</li>
+                        <li>✓ ML Models: Ready</li>
+                        <li>✓ Database: Ready</li>
+                    </ul>
+                </div>
+
+                <div class="info-item">
+                    <h4>🎤 Voice Input Guide</h4>
+                    <ul style="font-size: 13px; line-height: 1.6;">
+                        <li>Click the 🎤 button to start</li>
+                        <li>Speak clearly in your language</li>
+                        <li>Works in English, Hindi, Tamil, Telugu</li>
+                        <li>Click again or wait to stop</li>
+                        <li>Requires microphone permission</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Modal for settings -->
+    <div id="settingsModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label>Theme:</label>
+                <select onchange="changeTheme(this.value)">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Default Crop:</label>
+                <select id="defaultCrop">
+                    <option value="coconut">Coconut</option>
+                    <option value="palm">Oil Palm</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Response Format:</label>
+                <select>
+                    <option value="detailed">Detailed</option>
+                    <option value="concise">Concise</option>
+                </select>
+            </div>
+            <button onclick="closeSettings()" class="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal for help -->
+    <div id="helpModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Help & Documentation</h2>
+            <div class="help-section">
+                <h3>Getting Started</h3>
+                <p>AgriAI is your AI-powered agricultural assistant. Ask questions about:</p>
+                <ul>
+                    <li><strong>Disease Detection:</strong> "My plant has yellow spots"</li>
+                    <li><strong>Ripeness Analysis:</strong> "When to harvest?"</li>
+                    <li><strong>Yield Prediction:</strong> "Expected production?"</li>
+                    <li><strong>ESG Scoring:</strong> "Sustainability metrics"</li>
+                    <li><strong>Biomass Optimization:</strong> "Waste utilization"</li>
+                </ul>
+            </div>
+            <div class="help-section">
+                <h3>Features</h3>
+                <ul>
+                    <li>Upload images for AI analysis</li>
+                    <li>Voice input support</li>
+                    <li>Real-time knowledge retrieval</li>
+                    <li>Economic calculations</li>
+                    <li>Sustainability scoring</li>
+                </ul>
+            </div>
+            <button onclick="closeHelp()" class="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="static/theme-toggle.js"></script>
+    <script src="static/ai_app.js"></script>
+</body>
+</html>

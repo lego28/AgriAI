@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog - AgriAI</title>
+    <link rel="stylesheet" href="static/products.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; cursor: pointer;">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">AgriAI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/ai">AI Assistant</a></li>
+                <li><a href="/subsidies">Subsidies</a></li>
+                <li><a href="/products" class="active">Products</a></li>
+                <li><a href="/esg">ESG Score</a></li>
+                <li><button id="themeToggle" class="theme-toggle" title="Toggle Theme">☀️</button></li>
+                <li>
+                    <select id="languageSelector" class="language-select">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="hi">🇮🇳 हिंदी</option>
+                        <option value="ta">🇮🇳 தமிழ்</option>
+                        <option value="te">🇮🇳 తెలుగు</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1>Agricultural Products Catalog</h1>
+            <p>Browse products, equipment, and supplies for your farm</p>
+        </div>
+    </header>
+
+    <!-- Search and Filter Bar -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <button class="search-btn" onclick="searchProducts()">🔍</button>
+            </div>
+            
+            <div class="filters">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="seeds">Seeds & Seedlings</option>
+                    <option value="fertilizers">Fertilizers & Nutrients</option>
+                    <option value="pesticides">Pesticides & Protection</option>
+                    <option value="equipment">Farm Equipment</option>
+                    <option value="irrigation">Irrigation Systems</option>
+                    <option value="tools">Hand Tools</option>
+                    <option value="processing">Processing Equipment</option>
+                </select>
+                
+                <select id="cropFilter" class="filter-select">
+                    <option value="">All Crops</option>
+                    <option value="coconut">Coconut</option>
+                    <option value="oil-palm">Oil Palm</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="general">General Agriculture</option>
+                </select>
+                
+                <select id="priceFilter" class="filter-select">
+                    <option value="">All Prices</option>
+                    <option value="0-1000">₹0 - ₹1,000</option>
+                    <option value="1000-5000">₹1,000 - ₹5,000</option>
+                    <option value="5000-25000">₹5,000 - ₹25,000</option>
+                    <option value="25000+">₹25,000+</option>
+                </select>
+                
+                <button class="filter-btn" onclick="clearFilters()">Clear Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div class="products-container" id="productsContainer">
+            
+            <!-- Product Cards will be dynamically loaded -->
+            
+        </div>
+        
+        <div id="noResults" class="no-results" style="display: none;">
+            <h3>No products found</h3>
+            <p>Try adjusting your search or filters</p>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgriAI</h3>
+                <p>AI-powered agricultural intelligence for modern farmers</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/ai">AI Assistant</a></li>
+                    <li><a href="/subsidies">Subsidies</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Languages</h4>
+                <p>English | हिंदी | தமிழ் | తెலుగు</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriAI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/theme-toggle.js"></script>
+    <script src="static/products.js"></script>
+</body>
+</html>

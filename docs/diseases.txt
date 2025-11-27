@@ -1,0 +1,273 @@
+# Oil Palm Diseases - Comprehensive Knowledge Base
+
+## 1. Ganoderma Basal Stem Rot (GBSR)
+
+### Overview
+The most destructive disease of oil palm, caused by fungus *Ganoderma boninense*. Affects palms aged 4+ years.
+Economic loss: Up to 40% of plantation yield.
+
+### Symptoms
+- White or orange mycelium at base of trunk (most visible)
+- Constriction/girdling of trunk base
+- Upper frond yellowing and wilting
+- Reduced bunch production and quality
+- Sudden collapse in advanced stage
+- Root system shows white mycelium under bark
+- Disease progression: 18-36 months from infection to death
+
+### Cause & Transmission
+- Fungus *Ganoderma boninense* (pathogenic species)
+- Spores dispersed through soil contact, infected roots
+- Spreads through root-to-root contact (avoid monoculture)
+- Infection increases with waterlogging and poor drainage
+- Prevalence: High in regions with >2500mm annual rainfall
+
+### Treatment
+- **Diseased Palm Removal**: Dig out infected palm with root ball to 1m depth
+- **Burn/Compost**: Diseased material should NOT be left in field
+- **Replanting Gap**: Leave 6-12 months before replanting
+- **Fungicide (preventive only)**: Fludioxonil (not curative)
+- **Biological Control**: Trichoderma spp. in planting holes
+- **No Chemical Cure**: Once infected, palm must be removed
+
+### Prevention (CRITICAL)
+1. Proper drainage system (tile drains at 15-20m spacing)
+2. Avoid waterlogging (main risk factor)
+3. Mulching with organic matter (suppresses spores)
+4. Crop rotation with non-susceptible crops
+5. Quarantine procedures during planting
+6. Select resistant clones (Tenera > Dura)
+7. Deep plow to disrupt infected root fragments
+8. Monitor young palms for early symptoms
+
+### Yield Impact
+- Infected palm: 0% production (death within 24-36 months)
+- Prevention cost: $20-40/hectare/year
+- Treatment cost: $50-100 per infected palm
+- Replanting cost: $300-500 per palm
+
+---
+
+## 2. Leaf Spot Disease (Pestalotia/Cercospora)
+
+### Overview
+Common fungal disease affecting fronds. Caused by *Pestalotia palmarum* or *Cercospora elaeidis*.
+Severity: Moderate (rarely fatal, but reduces photosynthesis)
+
+### Symptoms
+- Small, circular brown spots on fronds
+- Spots may have concentric rings (target-like appearance)
+- Necrotic centers with yellow halo
+- Spots typically appear on older leaves first
+- Premature frond senescence
+- Reduced canopy coverage
+- Progressive defoliation in severe cases
+
+### Cause & Transmission
+- Fungal spores dispersed by:
+  * Rain splash
+  * Wind (short distances)
+  * Contact with contaminated tools
+- High humidity and warm temperatures accelerate
+- Poor canopy ventilation increases risk
+- Stress from drought or nutrient deficiency increases susceptibility
+
+### Treatment
+- **Cultural Practices**: Remove infected fronds (lower leaves)
+- **Fungicide Spray**: 
+  * Mancozeb (0.2%) - broad spectrum
+  * Chlorothalonil (0.15%) - effective preventive
+  * Copper compounds (0.1%)
+- **Application Timing**: Every 2-3 weeks during wet season
+- **Canopy Thinning**: Improve air circulation through pruning
+
+### Prevention
+1. Maintain good drainage and air movement
+2. Sanitize tools between trees
+3. Remove affected fronds promptly
+4. Apply fungicides prophylactically in wet season
+5. Maintain plant vigor through irrigation and nutrition
+6. Space palms adequately (9m x 9m minimum)
+7. Use resistant varieties if available
+
+### Yield Impact
+- Mild infections: 5-10% yield reduction
+- Severe infections: 15-25% yield reduction
+- With treatment: Minimal long-term impact
+
+---
+
+## 3. Bunch Rot (Fusarium/Rhizopus)
+
+### Overview
+Rot of ripening fruit bunches. Caused by *Fusarium solani* or *Rhizopus spp.*
+Critical during harvest season. Can cause 30% pre-harvest loss.
+
+### Symptoms
+- Rotting starting at fruit base or crown
+- Black or dark brown discoloration
+- Mushy, soft texture in affected fruits
+- White or pink mycelium may be visible
+- Foul smell in advanced cases
+- Reduced oil content in affected fruits
+- Entire bunch may be lost
+
+### Cause & Transmission
+- High humidity + warm temperatures (>28°C)
+- Insect damage creating entry points
+- Poor sanitation in field
+- Waterlogged conditions
+- Fruit damage during harvest
+- Spores present on dead organic matter
+
+### Treatment
+- **Field Sanitation**: Remove rotted bunches immediately
+- **Dispose**: Burn or deep bury affected bunches (NOT compost heap)
+- **Fungicide (Preventive)**: 
+  * Azoxystrobin (0.04%) - systemic, effective
+  * Trichoderma spray before harvest
+- **Early Harvest**: Harvest slightly early if rot detected
+- **Harvest During Dry**: Afternoon harvesting reduces moisture
+
+### Prevention
+1. Improve drainage (critical for bunch rot)
+2. Avoid overhead irrigation near bunches
+3. Pest management (insects create entry wounds)
+4. Harvest with clean tools
+5. Sanitize pruning tools between trees
+6. Remove all dead plant matter monthly
+7. Space palms for air circulation
+8. Apply preventive fungicides in high-risk season
+
+### Yield Impact
+- Untreated: 20-30% loss during high-humidity season
+- With prevention: <5% loss
+- Quality: Affected fruit produces low-quality oil
+
+---
+
+## 4. Pest Infestations - Major Pests of Oil Palm
+
+### A. Rhinoceros Beetle (*Oryctes rhinoceros*)
+- **Damage**: Larvae tunnel through trunk (frass visible)
+- **Impact**: Severe wilting, crown death, total yield loss
+- **Control**: Pheromone traps, parasitic nematodes (Steinernema), proper sanitation
+- **Loss**: 100% if large larvae present in crown
+
+### B. Bagworm (*Metisa plana*)
+- **Damage**: Severe defoliation, skeletal leaves remain
+- **Impact**: 30-50% yield loss if untreated
+- **Control**: Pruning infected fronds, Bacillus thuringiensis (BT), natural predators
+- **Prevention**: Maintain good canopy health
+
+### C. Scale Insects
+- **Damage**: Feeding on fronds, wilting
+- **Impact**: 10-20% yield loss
+- **Control**: Insecticidal soap, neem oil
+- **Threshold**: >5 per frond requires action
+
+### D. Mites (Spider mites, *Oligonychus*) 
+- **Damage**: Fine webbing, yellowing fronds
+- **Impact**: Reduced photosynthesis
+- **Control**: Water spray (disrupts webbing), miticides if severe
+- **Threshold**: >20 mites per leaflet
+
+### E. Stem Borers
+- **Damage**: Tunnel through trunk, creating holes
+- **Impact**: Structural weakness, sudden collapse
+- **Control**: Sanitize tools, remove infected wood, burn
+- **Threshold**: >3 holes visible
+
+### Pest Management Strategy
+1. **Regular scouting** (monthly during season)
+2. **Economic threshold** concept (treat when population reaches threshold)
+3. **Integrated Pest Management** (IPM):
+   - Cultural control (sanitation, proper spacing)
+   - Mechanical control (manual removal, traps)
+   - Biological control (predators, parasitoids, entomopathogenic fungi)
+   - Chemical control (last resort, selective use)
+4. **Pheromone monitoring** for early detection
+5. **Population tracking** to predict outbreaks
+
+---
+
+## 5. Nutritional Deficiencies (Abiotic Stresses)
+
+### Nitrogen (N) Deficiency
+- **Symptoms**: Uniform yellowing of fronds, reduced bunch size
+- **Treatment**: Urea (0.5-1.0 kg/palm/year) or NP fertilizer
+- **Yield Impact**: 20-30% reduction
+
+### Potassium (K) Deficiency
+- **Symptoms**: Orangish frond tips, reduced oil content
+- **Treatment**: KCl (1-2 kg/palm/year)
+- **Yield Impact**: 15-25% reduction
+
+### Magnesium (Mg) Deficiency
+- **Symptoms**: Interveinal chlorosis on lower fronds (orange-red)
+- **Treatment**: Epsom salt (0.3 kg/palm/year) or foliar Mg spray
+- **Yield Impact**: 10-15% reduction
+
+### Boron (B) Deficiency
+- **Symptoms**: Translucent spots, frond distortion
+- **Treatment**: Borax (0.05-0.1 kg/palm/year)
+- **Yield Impact**: Structural damage, poor pollination
+
+### Nutrient Management Best Practices
+1. Soil testing every 2-3 years
+2. Tissue analysis for diagnosis (critical fronds)
+3. Balanced NPK ratios (1:0.5:1.2 typical)
+4. Organic matter incorporation (mulching)
+5. Fractional application of fertilizers
+6. Micronutrient supplementation in deficient soils
+
+---
+
+## 6. Environmental Stresses
+
+### Drought Stress
+- Oil palm requires 2000-2500mm/year
+- Irrigate if <1500mm/year
+- Mulching essential in dry seasons
+- Yield loss: 20-40% under severe drought
+
+### Waterlogging
+- Primary risk factor for Ganoderma
+- Install proper drainage systems
+- Avoid in basins or low-lying areas
+- Can cause 50% yield loss
+
+### Temperature Extremes
+- Optimal: 24-32°C
+- Below 20°C: Pollination fails
+- Above 35°C: Stress, frond burning
+- Cold impacts: 10-20% yield reduction
+
+---
+
+## 7. Certified Best Management Practices
+
+### RSPO (Roundtable on Sustainable Palm Oil) Standards
+- Mandatory environmental impact assessment
+- Water management and pollution control
+- Pesticide management (no banned pesticides)
+- Soil conservation and rehabilitation
+- Biodiversity conservation (10% of plantation as buffer/wildlife)
+- Worker health and safety standards
+
+### ISCC (International Sustainability & Carbon Certification)
+- Greenhouse gas emission calculations
+- Renewable energy use requirements
+- Traceability throughout supply chain
+- Contamination prevention standards
+
+### Disease Monitoring Protocol (CRITICAL)
+1. **Monthly inspections** of 25-30 palms per 100 hectares
+2. **Record-keeping**: Disease type, location, severity (0-5 scale)
+3. **Action thresholds**:
+   - GBSR: 1% infected → take action
+   - Leaf spot: >30% frond affected → spray
+   - Bunch rot: >5% bunches affected → harvest early
+4. **Quarterly reporting** to management
+5. **Historical trending** for predictive management
+

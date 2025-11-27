@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (large files)
+models/
+
+# Session images
+static/sessionimg/*
+!static/sessionimg/.gitkeep
+
+# Distribution
+.dist/
+dist/
+build/
+*.egg-info/
+
+# Database
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+
+# Other
+agri_knowledge/
+utils/
+IMPLEMENTATION_SUMMARY.md

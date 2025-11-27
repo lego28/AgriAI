@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriAI - AI-Powered Agricultural Intelligence</title>
+    <link rel="stylesheet" href="static/landing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; cursor: pointer;">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">AgriAI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/ai">AI Assistant</a></li>
+                <li><a href="/detector">Disease Detector</a></li>
+                <li><a href="/subsidies">Subsidies</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/esg">ESG Score</a></li>
+                <li><button id="themeToggle" class="theme-toggle" title="Toggle Theme">☀️</button></li>
+                <li>
+                    <select id="languageSelector" class="language-select">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="hi">🇮🇳 हिंदी</option>
+                        <option value="ta">🇮🇳 தமிழ்</option>
+                        <option value="te">🇮🇳 తెలుగు</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Farm with AI</h1>
+            <p class="hero-subtitle">AI-powered disease detection, yield prediction, and sustainability scoring for Coconut, Oil Palm & Coffee farmers</p>
+            <div class="hero-buttons">
+                <a href="/ai" class="btn btn-primary">Start Chat Now</a>
+                <a href="/subsidies" class="btn btn-secondary">View Subsidies</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>24/7</h3>
+                    <p>AI Availability</p>
+                </div>
+                <div class="stat">
+                    <h3>90%*</h3>
+                    <p>Disease Detection Accuracy</p>
+                </div>
+                <div class="stat">
+                    <h3>4</h3>
+                    <p>Languages Supported</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Powerful Features for Modern Farming</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3>Disease Detection</h3>
+                <p>Upload images of diseased crops and get instant AI diagnosis with treatment recommendations</p>
+                <a href="/ai" class="feature-link">Try Now →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Yield Prediction</h3>
+                <p>AI-powered yield forecasting based on farm parameters and historical data</p>
+                <a href="/ai" class="feature-link">Predict Yield →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">♻️</div>
+                <h3>Biomass Optimization</h3>
+                <p>Convert agricultural waste into revenue through circular economy solutions</p>
+                <a href="/ai" class="feature-link">Calculate Value →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>ESG Scoring</h3>
+                <p>Environmental, Social, and Governance sustainability assessment for your farm</p>
+                <a href="/ai" class="feature-link">Get Score →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Government Subsidies</h3>
+                <p>Discover and access government schemes available for your crop and region</p>
+                <a href="/subsidies" class="feature-link">View Schemes →</a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🗣️</div>
+                <h3>Multilingual Support</h3>
+                <p>Chat in Hindi, Tamil, Telugu, or English - AI understands your language</p>
+                <a href="/ai" class="feature-link">Start Chat →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crops Section -->
+    <section class="crops">
+        <h2 class="section-title">Supported Crops</h2>
+        <div class="crops-grid">
+            <div class="crop-card">
+                <div class="crop-icon">🥥</div>
+                <h3>Coconut</h3>
+                <ul>
+                    <li>37 disease classifications</li>
+                    <li>Yield optimization</li>
+                    <li>Biomass conversion</li>
+                    <li>Market pricing</li>
+                </ul>
+            </div>
+            
+            <div class="crop-card">
+                <div class="crop-icon">🌴</div>
+                <h3>Oil Palm</h3>
+                <ul>
+                    <li>Ripeness classification</li>
+                    <li>FFB yield prediction</li>
+                    <li>Disease detection</li>
+                    <li>Harvest timing</li>
+                </ul>
+            </div>
+            
+            <div class="crop-card">
+                <div class="crop-icon">☕</div>
+                <h3>Coffee</h3>
+                <ul>
+                    <li>Disease identification</li>
+                    <li>Quality assessment</li>
+                    <li>Processing guidance</li>
+                    <li>Pulp valorization</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload or Ask</h3>
+                <p>Take a photo of your crop or type your question in your preferred language</p>
+            </div>
+            
+            <div class="step-arrow">→</div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our advanced AI models analyze your input using deep learning and expert knowledge</p>
+            </div>
+            
+            <div class="step-arrow">→</div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Solutions</h3>
+                <p>Receive actionable recommendations with treatment plans and subsidy information</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">What Farmers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <p class="quote">"AgriAI helped me detect coconut bud rot early. Saved my entire plantation!"</p>
+                <p class="author">- Ramesh Kumar, Tamil Nadu</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="quote">"मुझे सब्सिडी मिलने में बहुत मदद मिली। बहुत आसान है!"</p>
+                <p class="author">- Suresh Patel, Karnataka</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="quote">"The ESG scoring helped me get certification for export. Amazing tool!"</p>
+                <p class="author">- Maria D'Souza, Kerala</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>Ready to Transform Your Farm?</h2>
+        <p>Join thousands of farmers using AI to increase yields and reduce losses</p>
+        <a href="/ai" class="btn btn-primary btn-large">Start Free Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AgriAI</h3>
+                <p>AI-powered agricultural intelligence for modern farmers</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/ai">AI Assistant</a></li>
+                    <li><a href="/subsidies">Subsidies</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/esg">ESG Score</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Languages</h4>
+                <p>English | हिंदी | தமிழ் | తెలుగు</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AgriAI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="static/theme-toggle.js"></script>
+    <script src="static/landing.js"></script>
+</body>
+</html>

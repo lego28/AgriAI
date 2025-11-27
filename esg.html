@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Dashboard - Agri AI</title>
+    <link rel="stylesheet" href="/static/esg.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; cursor: pointer;">
+                <span class="logo-icon">🌾</span>
+                <span class="logo-text">Agri AI</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/ai">AI Assistant</a></li>
+                <li><a href="/subsidies">Subsidies</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/esg" class="active">ESG Score</a></li>
+                <li><button id="themeToggle" class="theme-toggle" title="Toggle Theme">☀️</button></li>
+                <li>
+                    <select id="languageSelector" class="language-selector">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="ta">தமிழ்</option>
+                        <option value="te">తెలుగు</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="esg-container">
+        <!-- Header Section -->
+        <div class="esg-header">
+            <h1>ESG Sustainability Dashboard</h1>
+            <p class="subtitle">Environmental, Social & Governance Performance Metrics</p>
+            
+            <!-- Plantation Input -->
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="numPalms">Number of Palm Trees:</label>
+                    <input type="number" id="numPalms" value="1000" min="100" max="100000" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="annualCycles">Annual Harvest Cycles:</label>
+                    <input type="number" id="annualCycles" value="2" min="1" max="4" step="1">
+                </div>
+                <div class="input-group">
+                    <label for="location">Location:</label>
+                    <select id="location">
+                        <option value="tropics">Tropical Region</option>
+                        <option value="subtropical">Subtropical Region</option>
+                        <option value="temperate">Temperate Region</option>
+                    </select>
+                </div>
+                <button id="calculateBtn" class="calculate-btn">Calculate ESG Score</button>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading-state" style="display: none;">
+            <div class="spinner"></div>
+            <p>Calculating ESG metrics...</p>
+        </div>
+
+        <!-- ESG Scores Section -->
+        <div id="esgScores" class="esg-scores" style="display: none;">
+            <!-- Overall Score -->
+            <div class="overall-score-card">
+                <h2>Overall ESG Score</h2>
+                <div class="overall-score" id="overallScore">0</div>
+                <div class="score-rating" id="scoreRating">Calculating...</div>
+            </div>
+
+            <!-- Three Radial Charts -->
+            <div class="radial-charts">
+                <!-- Environmental Score -->
+                <div class="chart-card">
+                    <h3>Environmental</h3>
+                    <div class="radial-chart">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="chart-bg" cx="100" cy="100" r="80"></circle>
+                            <circle class="chart-progress environmental-progress" id="envProgress" 
+                                    cx="100" cy="100" r="80" 
+                                    stroke-dasharray="502.65" 
+                                    stroke-dashoffset="502.65"></circle>
+                        </svg>
+                        <div class="chart-value">
+                            <span class="value" id="envValue">0</span>
+                            <span class="label">/ 100</span>
+                        </div>
+                    </div>
+                    <div class="metrics-list" id="envMetrics">
+                        <div class="metric-item">
+                            <span class="metric-icon">🌱</span>
+                            <span class="metric-text">CO₂ Reduction: <strong>0 kg</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">♻️</span>
+                            <span class="metric-text">Waste Recycled: <strong>0%</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">💧</span>
+                            <span class="metric-text">Water Saved: <strong>0 L</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Score -->
+                <div class="chart-card">
+                    <h3>Social</h3>
+                    <div class="radial-chart">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="chart-bg" cx="100" cy="100" r="80"></circle>
+                            <circle class="chart-progress social-progress" id="socialProgress" 
+                                    cx="100" cy="100" r="80" 
+                                    stroke-dasharray="502.65" 
+                                    stroke-dashoffset="502.65"></circle>
+                        </svg>
+                        <div class="chart-value">
+                            <span class="value" id="socialValue">0</span>
+                            <span class="label">/ 100</span>
+                        </div>
+                    </div>
+                    <div class="metrics-list" id="socialMetrics">
+                        <div class="metric-item">
+                            <span class="metric-icon">👨‍🌾</span>
+                            <span class="metric-text">Jobs Created: <strong>0</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">🏘️</span>
+                            <span class="metric-text">Community Impact: <strong>Medium</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">📚</span>
+                            <span class="metric-text">Training Programs: <strong>Available</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Governance Score -->
+                <div class="chart-card">
+                    <h3>Governance</h3>
+                    <div class="radial-chart">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="chart-bg" cx="100" cy="100" r="80"></circle>
+                            <circle class="chart-progress governance-progress" id="govProgress" 
+                                    cx="100" cy="100" r="80" 
+                                    stroke-dasharray="502.65" 
+                                    stroke-dashoffset="502.65"></circle>
+                        </svg>
+                        <div class="chart-value">
+                            <span class="value" id="govValue">0</span>
+                            <span class="label">/ 100</span>
+                        </div>
+                    </div>
+                    <div class="metrics-list" id="govMetrics">
+                        <div class="metric-item">
+                            <span class="metric-icon">✅</span>
+                            <span class="metric-text">Compliance: <strong>100%</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">📊</span>
+                            <span class="metric-text">Transparency: <strong>High</strong></span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-icon">🔒</span>
+                            <span class="metric-text">Ethics: <strong>Certified</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Metrics -->
+            <div class="detailed-metrics">
+                <div class="metrics-section">
+                    <h3>🌍 Environmental Impact</h3>
+                    <div class="metrics-grid" id="envDetailsGrid">
+                        <!-- Will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="metrics-section">
+                    <h3>💰 Economic Analysis</h3>
+                    <div class="metrics-grid" id="economicGrid">
+                        <!-- Will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="metrics-section">
+                    <h3>📈 Recommendations</h3>
+                    <div class="recommendations" id="recommendations">
+                        <!-- Will be populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error-state" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <p id="errorMessage">Failed to load ESG data. Please try again.</p>
+            <button onclick="calculateESG()" class="retry-btn">Retry</button>
+        </div>
+    </div>
+
+    <script src="/static/theme-toggle.js"></script>
+    <script src="/static/esg.js"></script>
+</body>
+</html>
