@@ -2,13 +2,15 @@ name: Build (SonarCloud)
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 jobs:
   sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -19,12 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      # (Optional) add build/test steps here for coverage
+
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v3
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: >
-            -Dsonar.organization=lego28
-            -Dsonar.projectKey=lego28_AgriAI
